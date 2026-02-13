@@ -26,39 +26,42 @@
 </head>
 <body class="bg-slate-800 m-0">
 
-<!-- header section starts -->
+<!--header section starts here-->  
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/10 border-b border-white/30 px-3 md:p-0">
-  <!-- navbar starts -->
-  <nav class="max-w-7xl mx-auto flex items-center justify-between p-3 text-yellow-400">
-    <!-- small screen icon -->
-    <div class="text-[28px] font-medium md:hidden flex">
-      <a href="/">&#8801</a>
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-3 text-yellow-400">
+      
+      <div class="text-[28px] font-medium md:hidden flex cursor-pointer z-[60] transition-all duration-300" id="menu-btn">
+        &#8801;
+      </div>
+  
+      <div class="lg:text-[30px] md:text-[25px] text-[20px] font-medium cursor-pointer">
+        <h1><i>Yasir</i><sup><span class="text-yellow-100 italic ml-3">Portfolio</span></sup></h1>
+      </div>
+  
+      <ul class="hidden md:flex items-center space-x-4 lg:text-xl md:text-sm">
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#">Home</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#about">About</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#services">Services</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#projects">Projects</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="https://wa.me/923236832378" target="_blank">Contact Us</a></li>
+      </ul>
+  
+      <a class="text-black lg:text-lg md:text-md text-sm font-medium px-4 py-1 bg-yellow-600 rounded-lg hover:bg-yellow-400 transition-all duration-500 ease-in-out" href="mailto:email@example.com">Send Email</a>
+    </nav>
+  
+    <div id="mobile-menu" class="fixed top-16 right-0 w-[60%] h-fit pb-8 bg-black/90 border-l border-b border-white/20 rounded-bl-3xl transform translate-x-full transition-transform duration-500 ease-in-out z-50 md:hidden shadow-2xl shadow-yellow-400/20">
+      <ul class="flex flex-col space-y-5 pt-10 px-6 text-yellow-400 text-lg font-medium">
+        <li class="hover:translate-x-2 transition-transform duration-300 border-b border-white/10 pb-2"><a href="#">Home</a></li>
+        <li class="hover:translate-x-2 transition-transform duration-300 border-b border-white/10 pb-2"><a href="#about">About</a></li>
+        <li class="hover:translate-x-2 transition-transform duration-300 border-b border-white/10 pb-2"><a href="#services">Services</a></li>
+        <li class="hover:translate-x-2 transition-transform duration-300 border-b border-white/10 pb-2"><a href="#projects">Projects</a></li>
+        <li class="hover:translate-x-2 transition-transform duration-300"><a href="https://wa.me/923236832378" target="_blank">Contact Us</a></li>
+      </ul>
     </div>
-   <!-- logo -->
-    <div class="lg:text-[30px] md:text-[25px] text-[20px] font-medium cursor-pointer">
-      <h1>
-        <i>Yasir</i>
-        <sup>
-          <span class="text-yellow-100 hover:text-yellow-400 cursor-pointer"><i>Portfolio</i>
-        </sup>
-      </h1>
-    </div>
-    <!-- list items -->
-    <ul class="hidden md:flex items-center justify-center lg:space-x-4 md:space-x-2 lg:text-xl md:text-sm">
-      <li class="hover:text-black hover:bg-yellow-400 hover:underline decoration-2 decoration-black underline-offset-4 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 z-10"><a href="https://muhammadyasirmaib0929.github.io/M-Yasir-MAIB-Personal-Portfolio/" target="_blank">Home</a></li>
-      <li class="hover:text-black hover:bg-yellow-400 hover:underline decoration-2 decoration-black underline-offset-4 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 z-10"><a href="#about">About</a></li>
-      <li class="hover:text-black hover:bg-yellow-400  hover:underline decoration-2 decoration-black underline-offset-4 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 z-10"><a href="#services">Services</a></li>
-      <li class="hover:text-black hover:bg-yellow-400 hover:underline decoration-2 decoration-black underline-offset-4 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 z-10"><a href="#projects">Projects</a></li>
-      <li class="hover:text-black hover:bg-yellow-400 hover:underline decoration-2 decoration-black underline-offset-4 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 z-10"><a href="https://wa.me/923236832378" target="_blank">Contact Us</a></li>
-    </ul>
-    <!-- button -->
-    <a class="text-black lg:text-lg md:text-md text-sm font-medium px-4 py-1 bg-yellow-600 rounded-lg hover:shadow-lg hover:shadow-yellow-400 transition-all duration-700 ease-in-out" href="mailto:muhammadyasirmaib0929@gmail.com" target="_blank">
-      Send Email
-    </a>
-  </nav>
-  <!-- navbar ends -->
+  
+    <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-40 md:hidden backdrop-blur-sm"></div>
 </header>
-<!-- header section ends -->
+<!--header section ends here-->
 
 
 
@@ -72,11 +75,11 @@
   </div>
   <!-- Text section -->
   <div class="lg:w-[45%] w-[90%] text-white flex flex-col gap-4 text-center md:text-left p-4 md:p-8 animate__animated animate__fadeInUp">
-    <h1 class="lg:text-4xl md:text-2xl text-xl font-bold">
-      Hi, I am <span class="text-yellow-400"><i>M.Yasir MAIB</i></span> From Basir Pur (OKARA). I am a Passionate
+    <h1 class="lg:text-4xl md:text-2xl text-xl font-bold font-mono">
+      Hi, I am <span class="text-yellow-400"><i>M.Yasir MAIB</i></span> From Basir Pur (OKARA). <br> I am a Passionate
       <span class="text-yellow-400">Web-Developer</span>
     </h1>
-    <p class="lg:text-xl md:text-base text-sm font-light">
+    <p class="lg:text-xl md:text-base text-sm font-light tracking-wider">
       I am a <span class="text-yellow-400">Front-End Developer</span> and currently learning back-end technologies. I have built 11 front-end-based projects so far, 
       out of which 10 are real-life projects. I am a JavaScript Developer and currently 
       learning <span class="text-yellow-400">JavaScript and React.</span> The strong programming languages I have learned 
@@ -90,7 +93,7 @@
   <!-- Image section -->
   <div class="lg:w-[45%] md:w-[40%] w-[70%] flex items-center justify-center animate__animated animate__fadeInDown">
     <div class="w-[180px] h-[180px] md:w-[250px] md:h-[250px] lg:w-[380px] lg:h-[380px] rounded-full border-2 border-yellow-400 shadow-2xl shadow-yellow-500 overflow-hidden">
-      <img class="w-full h-full object-cover object-top z-10" src="M Yasir MAIB Glasses.png" alt="Profile Image">
+      <img class="w-full h-full object-cover object-top z-10" src="M Yasir MAIB.jpg" alt="Profile Image">
     </div>
   </div>
 </section>
@@ -146,15 +149,15 @@
 <section class="w-full h-auto py-16 px-8 flex flex-col items-center justify-center bg-black/80 border-b-2 border-white">
   <!--heading-->
   <div>
-    <p class="md:text-5xl text-1xl text-yellow-500 md:rounded-xl font-md py-2 px-10 rounded-lg mb-10 cursor-default">
+    <p class="md:text-5xl text-3xl text-yellow-500 md:rounded-xl font-md py-2 px-10 rounded-lg mb-10 cursor-default">
       My Projects
     </p>
   </div>
   <!--main-->
-  <div class="flex flex-wrap justify-center gap-10 p-6">
+  <div class="flex flex-nowrap overflow-x-auto gap-8 p-6 w-full max-w-full pb-10 scroll-smooth">
 
     <!-- Idreesia -->
-    <div class="group md:w-[350px] w-[300px] h-[450px] bg-green-950 hover:bg-yellow-600/90  transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 py-8 cursor-pointer overflow-hidden border-2 border-white/30">
+    <div class="group flex-shrink-0 md:w-[350px] w-[300px] h-[450px] bg-green-950 hover:bg-yellow-600/90  transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 py-8 cursor-pointer overflow-hidden border-2 border-white/30">
       <!-- Content -->
       <div class="relative z-10 flex flex-col items-center justify-between h-full">
         <!--image-->
@@ -182,7 +185,7 @@
   </div>
 
   <!--daraz-->
-  <div class="group py-8 md:w-[350px] w-[300px] h-[450px] bg-orange-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-orange-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
     <!--content-->
     <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <!--image-->
@@ -207,7 +210,7 @@
   </div>
 
   <!--co/fitness-->
-  <div class="group py-8 md:w-[350px] w-[300px] h-[450px] bg-red-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-red-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
     <!--content-->
     <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <!--image-->
@@ -231,7 +234,7 @@
   </div>
 
   <!-- MYS -->
-   <div class="group py-8 md:w-[350px] w-[300px] h-[450px] bg-teal-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-teal-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
      <!-- Content -->
      <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <!--image-->
@@ -257,7 +260,7 @@
   </div>
 
   <!-- Salesforce -->
-   <div class="group py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-700 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-700 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
    <!-- Content -->
     <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <!--image-->
@@ -283,7 +286,7 @@
   </div>
 
   <!-- SaaS Landing Page -->
-   <div class="group py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-950 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-950 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
     <!-- Content -->
      <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <!--image-->
@@ -309,7 +312,7 @@
   </div>
 
   <!--new version idreesia-->
-  <div class="group py-8 md:w-[350px] w-[300px] h-[450px] bg-green-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-green-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
     <!-- Content -->
      <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <!--image-->
@@ -336,7 +339,7 @@
   </div>
 
   <!--MAIB Store-->
-  <div class="group py-8 md:w-[350px] w-[300px] h-[450px] bg-emerald-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-emerald-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
     <!-- Content -->
      <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <!--image-->
@@ -354,62 +357,62 @@
       <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
-          <a href="https://github.com/muhammadyasirmaib29/new-version-idreesia.com" target="_blank">Visit Project Repo</a>
+          <a href="https://github.com/muhammadyasirmaib0929/Transcend-2nd-Internship-Project-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
         </p>
-        <a class="py-1 px-4 rounded-lg bg-yellow-500 text-black text-sm font-medium hover:bg-yellow-600" href="https://muhammadyasirmaib29.github.io/MAIB-Store/" target="_blank">Visit My Project</a>
+        <a class="py-1 px-4 rounded-lg bg-yellow-500 text-black text-sm font-medium hover:bg-yellow-600" href="https://muhammadyasirmaib0929.github.io/Transcend-2nd-Internship-Project-M-Yasir-MAIB/" target="_blank">Visit My Project</a>
       </div>
     </div>
   </div>
 
-  <!-- Eziline Software Web -->
-  <div class="group py-6 w-full min-h-[220px] bg-blue-900 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-[1.02] rounded-2xl flex flex-col justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-  
-    <!-- Main Row (Same on all screens) -->
-    <div class="relative z-10 flex flex-row items-start gap-4 h-full">
-  
-      <!-- Image -->
-      <div
-        class="w-14 h-14 sm:w-16 sm:h-16 md:w-[100px] md:h-[100px] rounded-full overflow-hidden flex items-center justify-center shrink-0">
-        <img class="w-full h-full object-cover" src="eziline.jfif" alt="">
+  <!--Eziline Software web-->
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+    <!-- Content -->
+     <div class="relative z-10 flex flex-col items-center justify-between h-full">
+      <!--image-->
+      <div class="w-20 h-20 rounded-full overflow-hidden md:w-[120px] md:h-[120px] flex items-center justify-center">
+        <img class="w-full h-full object-cover" src="eziline.jfif" alt="MAIB-Store">
       </div>
-  
-      <!-- Content -->
-      <div class="flex flex-col gap-2 w-full">
-  
-        <!-- Heading -->
-        <h1
-          class="text-white bg-blue-700 font-medium px-3 py-1 rounded-lg w-fit text-[10px] sm:text-sm md:text-base">
-          Project Details:
-        </h1>
-  
-        <!-- Text -->
-        <p
-          class="text-[9px] sm:text-[11px] md:text-sm font-light text-white leading-snug text-justify">
-          Its my first task project in Internship. I apply for internship in frontend development.
-          So, I meet up Eziline Software House CEO Ibrahim Shah. Then CEO my interview start and he
-          say you can build in our official website in frontend 48 hr. I say Yes I can build your
-          official website clone in 48 hr. But I build this site in 15 hr and CEO was very happy and
-          my Internship is done Alhamdulillah.
+      <!--heading-->
+      <h1 class="text-white bg-blue-600 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
+      <!--text-->
+      <p class="text-sm font-light text-white text-center cursor-text">
+        Its my first task project in Internship.Then CEO my interview start and he
+        say you can build in our official website in frontend 48 hr. I say Yes I can build your
+        official website clone in 48 hr. But I build this site in 15 hr and CEO was very happy and
+        my Internship is done Alhamdulillah.
+      </p>
+      <!--buttons-->
+      <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
+        <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
+          <a href="https://github.com/muhammadyasirmaib0929/Eziline-Software-House-Task-Project-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
         </p>
-  
-        <!-- Buttons Row (Always Row, Even Mobile) -->
-        <div class="flex flex-row gap-2 mt-2 flex-wrap">
-  
-          <a
-            href="https://github.com/muhammadyasirmaib0929/Eziline-Software-House-Task-Project-M-Yasir-MAIB"
-            target="_blank"
-            class="text-[9px] sm:text-xs md:text-sm font-medium text-yellow-500 bg-black/90 px-3 py-1 rounded-lg hover:text-white hover:bg-white/30 transition">
-            Visit Project Repo
-          </a>
-  
-          <a
-            href="https://muhammadyasirmaib0929.github.io/Eziline-Software-House-Task-Project-M-Yasir-MAIB/"
-            target="_blank"
-            class="text-[9px] sm:text-xs md:text-sm font-medium bg-yellow-500 text-black px-3 py-1 rounded-lg hover:bg-yellow-600 transition">
-            Visit My Project
-          </a>
-  
-        </div>
+        <a class="py-1 px-4 rounded-lg bg-yellow-500 text-black text-sm font-medium hover:bg-yellow-600" href="https://muhammadyasirmaib0929.github.io/Eziline-Software-House-Task-Project-M-Yasir-MAIB/" target="_blank">Visit My Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!--Transcend-->
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-pink-600 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+    <!-- Content -->
+     <div class="relative z-10 flex flex-col items-center justify-between h-full">
+      <!--image-->
+      <div class="w-20 h-20 rounded-full overflow-hidden md:w-[120px] md:h-[120px] flex items-center justify-center">
+        <img class="w-full h-full object-cover" src="transcend.png" alt="MAIB-Store">
+      </div>
+      <!--heading-->
+      <h1 class="text-white bg-pink-800 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
+      <!--text-->
+      <p class="text-sm font-light text-white text-center cursor-text">
+        As part of my second internship project, I developed a high-performance,
+        responsive web application focusing on clean UI and interactive user experiences.
+        This project allowed me to bridge the gap between static design and functional logic using modern frontend tools.
+      </p>
+      <!--buttons-->
+      <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
+        <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
+          <a href="https://github.com/muhammadyasirmaib0929/Transcend-2nd-Internship-Project-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
+        </p>
+        <a class="py-1 px-4 rounded-lg bg-yellow-500 text-black text-sm font-medium hover:bg-yellow-600" href="https://muhammadyasirmaib0929.github.io/Transcend-2nd-Internship-Project-M-Yasir-MAIB/" target="_blank">Visit My Project</a>
       </div>
     </div>
   </div>
@@ -578,11 +581,16 @@
       <a href="https://wa.me/923236832378" target="_blank"><img src="user.png" class="w-full h-full object-cover" alt="hologram"></a>
     </div>
     <div>
-      <p class="px-2 py-1 bg-black/50 text-white rounded-lg">You Need Help Me? Please Contact Us</p>
+      <p class="px-2 py-1 bg-black/80 text-white rounded-lg">You Need Help Me? Please Contact Us</p>
     </div>
   </div>
 </footer>
 <!--footer section ends here-->
+
+
+
+<!--javascript link-->
+<script src="index.js"></script>
 
 
 
