@@ -26,29 +26,45 @@
 </head>
 <body class="bg-slate-800 m-0">
 
+
 <!--header section starts here-->
-<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/10 border-b border-white/30 px-3 md:p-0">
-
-    <nav class="w-full flex items-center justify-between p-3 text-yellow-400">
-    
-    <div class="text-[28px] font-medium md:hidden flex cursor-pointer">
-    &#8801;
-    </div>
-    
-    <div class="lg:text-[30px] md:text-[25px] text-[20px] font-medium cursor-pointer">
-    <h1><i>Yasir</i><sup><span class="text-yellow-100 italic ml-3">Portfolio</span></sup></h1>
-    </div>
-    
-    <ul class="hidden md:flex items-center space-x-4 lg:text-xl md:text-sm">
-    <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#">Home</a></li>
-    <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#about">About</a></li>
-    <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#services">Services</a></li>
-    <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="#projects">Projects</a></li>
-    <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500 ease-in-out"><a href="https://wa.me/923236832378" target="_blank">Contact Us</a></li>
-    </ul> 
-     <a class="text-black lg:text-lg md:text-md text-sm font-medium px-4 py-1 bg-yellow-600 rounded-lg hover:bg-yellow-400 transition-all duration-500 ease-in-out" href="mailto:email@example.com">Send Email</a>
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/10 border-b border-white/30 px-3 md:px-0">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-3 text-yellow-400">
+      
+      <div class="text-[28px] font-medium md:hidden flex cursor-pointer z-[60] transition-all duration-300" id="menu-btn">
+        &#8801;
+      </div>
+  
+      <div class="lg:text-[30px] md:text-[25px] text-[20px] font-medium cursor-pointer">
+        <h1><i>Yasir</i><sup><span class="text-yellow-100 italic ml-2">Portfolio</span></sup></h1>
+      </div>
+  
+      <ul class="hidden md:flex items-center space-x-4 lg:text-xl md:text-sm">
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500"><a href="#">Home</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500"><a href="#about">About</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500"><a href="#services">Services</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500"><a href="#projects">Projects</a></li>
+        <li class="hover:text-black hover:bg-yellow-400 px-4 py-1 rounded-lg transition-all duration-500"><a href="https://wa.me/923236832378" target="_blank">Contact Us</a></li>
+      </ul>
+  
+      <a class="text-black lg:text-lg md:text-md text-sm font-medium px-4 py-1 bg-yellow-600 rounded-lg hover:bg-yellow-400 transition-all duration-500" href="mailto:email@example.com">Send Email</a>
     </nav>
-
+  
+    <div id="mobile-menu" class="fixed top-0 left-0 w-[280px] h-full bg-black border-r border-white/20 transition-transform duration-500 ease-in-out z-[70] md:hidden shadow-2xl -translate-x-full">
+      <div class="p-6 flex justify-between items-center border-b border-white/10">
+          <span class="text-yellow-400 font-bold text-xl">Menu</span>
+          <span id="close-btn" class="text-white text-3xl cursor-pointer">&times;</span>
+      </div>
+      <ul class="flex flex-col space-y-6 pt-10 px-6 py-2 bg-black text-white/80 text-lg font-medium">
+        <li class="hover:text-yellow-500 transition-all border-b border-white/10 pb-2"><a href="#">Home</a></li>
+        <li class="hover:text-yellow-500 transition-all border-b border-white/10 pb-2"><a href="#about">About</a></li>
+        <li class="hover:text-yellow-500 transition-all border-b border-white/10 pb-2"><a href="#services">Services</a></li>
+        <li class="hover:text-yellow-500 transition-all border-b border-white/10 pb-2"><a href="#projects">Projects</a></li>
+        <li class="hover:text-yellow-500 transition-all border-b border-black pb-2"><a href="https://wa.me/923236832378" target="_blank">Contact Us</a></li>
+      </ul>
+    </div>
+  
+    <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-[65] backdrop-blur-sm transition-opacity duration-300"></div>
 </header>
 <!--header section ends here-->
 
@@ -133,46 +149,22 @@
 <!--services section ends here-->
 
 
-<style>
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
 
-  .animate-slow-scroll {
-    display: flex;
-    width: max-content;
-    animation: scroll 40s linear infinite;
-  }
-  .animate-slow-scroll:hover {
-    animation-play-state: paused;
-  }
-</style>
-
-<!--projects section starts here-->
+<!--project section starts here-->
 <section class="w-full h-auto py-16 flex flex-col items-center justify-center bg-black/80 border-b-2 border-white">
-  <!--heading-->
   <div>
     <p class="md:text-5xl text-3xl text-yellow-500 md:rounded-xl font-md py-2 px-10 rounded-lg mb-10 cursor-default">
       My Projects
     </p>
   </div>
-  <!--main-->
-  <div class="flex flex-nowrap overflow-hidden">
+  <div class="flex flex-nowrap overflow-x-auto gap-8 p-6 w-full max-w-full pb-10 scroll-smooth">
 
-  <div class="animate-slow-scroll flex gap-8 p-6">
-
-    <!-- Idreesia -->
     <div class="group flex-shrink-0 md:w-[350px] w-[300px] h-[450px] bg-green-950 hover:bg-yellow-600/90  transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 py-8 cursor-pointer overflow-hidden border-2 border-white/30">
-      <!-- Content -->
       <div class="relative z-10 flex flex-col items-center justify-between h-full">
-        <!--image-->
         <div class="w-20 h-20 md:w-[120px] md:h-[120px] flex items-center justify-center overflow-hidden">
         <img class="w-full h-full object-contain" src="urdu-idreesia-logo.png" alt="">
         </div>
-      <!--heading-->
       <h1 class="text-white bg-green-700 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         This was my first project in my web development journey.
         I recreated the real-life website Idreesia.com entirely
@@ -180,7 +172,6 @@
         learning experience where I practiced layout design, styling
         , and responsive web techniques.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/Idreesia-Offical-Clone-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -190,24 +181,18 @@
     </div>
   </div>
 
-  <!--daraz-->
   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-orange-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-    <!--content-->
     <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
       <div class="w-[140px] h-20 rounded-xl overflow-hidden md:w-[180px] md:h-[100px] flex items-center justify-center">
         <img class="w-full h-full object-cover" src="daraz.image.svg" alt="">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-orange-600 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         I created this project as a clone of the real Daraz.pk
          website using HTML and Tailwind CSS. I designed and built
           every section myself to improve my frontend development skills
            and better understand website structure and layout design.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer"><a href="https://github.com/muhammadyasirmaib0929/Daraz-Offical-Clone-M-Yasir-MAIB" target="_blank">Visit Project Repo</a></p>
         <a class="py-1 px-4 rounded-lg bg-yellow-500 text-black text-sm font-medium hover:bg-yellow-600" href="https://muhammadyasirmaib0929.github.io/Daraz-Offical-Clone-M-Yasir-MAIB/" target="_blank">Visit My Project</a>
@@ -215,23 +200,17 @@
     </div>
   </div>
 
-  <!--co/fitness-->
   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-red-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-    <!--content-->
     <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
       <div class="w-20 h-20 md:w-[120px] md:h-[120px] flex items-center justify-center overflow-hidden">
         <img class="w-full h-full object-contain" src="logo-vertical.png" alt="">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-red-600 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         This is a complete CO Fitness Club website that I built using HTML and Tailwind CSS.
          It includes multiple fully designed pages, responsive layouts,
           and a modern UI that highlights fitness programs, trainers, and facilities.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer"><a href="https://github.com/muhammadyasirmaib0929/Co-Fitness-Club-Clone-M-Yasir-MAIB" target="_blank">Visit Project Repo</a></p>
         <a class="py-1 px-4 rounded-lg bg-yellow-500 text-black text-sm font-medium hover:bg-yellow-600" href="https://muhammadyasirmaib0929.github.io/Co-Fitness-Club-Clone-M-Yasir-MAIB/" target="_blank">Visit My Project</a>
@@ -239,23 +218,17 @@
     </div>
   </div>
 
-  <!-- MYS -->
-   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-teal-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-     <!-- Content -->
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-teal-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
      <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
       <div class="w-20 h-20 md:w-[120px] md:h-[120px] flex items-center justify-center overflow-hidden">
         <img class="w-full h-full object-contain" src="MYS-logo.svg" alt="">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-green-500 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         I developed the MYS Website using HTML, Tailwind CSS, and Remix Icons.
         It showcases my web development work, skills,
         and personal projects with a clean, modern, and fully responsive design.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/MYS-Conference-Mangement-Clone-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -265,23 +238,17 @@
     </div>
   </div>
 
-  <!-- Salesforce -->
-   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-700 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-   <!-- Content -->
-    <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-700 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+   <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <div class="w-20 h-20 md:w-[120px] md:h-[120px] flex items-center justify-center overflow-hidden">
         <img class="w-full h-full object-contain" src="logo image.svg" alt="">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-blue-500 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         I created the Salesforce UI Clone using HTML and Tailwind CSS. 
         This project replicates the modern Salesforce interface with a clean layout
         , responsive design, and attention to UI details to improve my frontend skills.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/Salesforce-UI-Offical-Clone-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -291,23 +258,17 @@
     </div>
   </div>
 
-  <!-- SaaS Landing Page -->
-   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-950 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-    <!-- Content -->
-     <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
+  <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-950 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
+    <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <div class="w-20 h-20 rounded-full overflow-hidden md:w-[120px] md:h-[120px] flex items-center justify-center">
         <img class="w-full h-full object-cover" src="best_saas_landing_page_templates.jpg" alt="">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-gray-500 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         I developed the SaaS Landing Page using HTML and Tailwind CSS.
         It features a modern, responsive design with interactive sections and dark mode support,
         focusing on clean UI and professional presentation.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/SaaS-Landing-Page-Clone-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -317,24 +278,18 @@
     </div>
   </div>
 
-  <!--new version idreesia-->
   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-green-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-    <!-- Content -->
-     <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
+    <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <div class="w-20 h-20 rounded-full overflow-hidden md:w-[120px] md:h-[120px] flex items-center justify-center">
         <img class="w-full h-full object-cover" src="urdu-idreesia-logo.png" alt="">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-green-700 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         This project is a fully custom, real-life inspired website built for Silsila Muhammadiya Ameenia Idreesia
         based on their actual center located in Idreesia Colony, Multan.
         I built this website from scratch using HTML and Tailwind CSS, focusing on modern UI,
         clean layout, and smooth visual experience.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/New-Version-Idreesia-Clone-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -344,23 +299,17 @@
     </div>
   </div>
 
-  <!--MAIB Store-->
   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-emerald-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-    <!-- Content -->
-     <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
+    <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <div class="w-20 h-20 rounded-full overflow-hidden md:w-[120px] md:h-[120px] flex items-center justify-center">
         <img class="w-full h-full object-cover" src="MAIB store.png" alt="MAIB-Store">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-teal-800 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         MAIB Store is a modern e-commerce web application that I built using HTML, Tailwind CSS. 
         This project demonstrates my ability to create a fully responsive online store with a clean design, 
         interactive UI elements, and smooth user experience.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/Transcend-2nd-Internship-Project-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -370,24 +319,18 @@
     </div>
   </div>
 
-  <!--Eziline Software web-->
   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-blue-800 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-    <!-- Content -->
-     <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
+    <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <div class="w-20 h-20 rounded-full overflow-hidden md:w-[120px] md:h-[120px] flex items-center justify-center">
         <img class="w-full h-full object-cover" src="eziline.jfif" alt="MAIB-Store">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-blue-600 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         Its my first task project in Internship.Then CEO my interview start and he
         say you can build in our official website in frontend 48 hr. I say Yes I can build your
         official website clone in 48 hr. But I build this site in 15 hr and CEO was very happy and
         my Internship is done Alhamdulillah.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/Eziline-Software-House-Task-Project-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -397,23 +340,17 @@
     </div>
   </div>
 
-  <!--Transcend-->
   <div class="group flex-shrink-0 py-8 md:w-[350px] w-[300px] h-[450px] bg-pink-600 hover:bg-yellow-600/90 transition-all duration-500 ease-in-out hover:scale-105 z-10 rounded-2xl flex flex-col items-center justify-between p-4 cursor-pointer overflow-hidden border-2 border-white/30">
-    <!-- Content -->
-     <div class="relative z-10 flex flex-col items-center justify-between h-full">
-      <!--image-->
+    <div class="relative z-10 flex flex-col items-center justify-between h-full">
       <div class="w-20 h-20 rounded-full overflow-hidden md:w-[120px] md:h-[120px] flex items-center justify-center">
         <img class="w-full h-full object-cover" src="transcend.png" alt="MAIB-Store">
       </div>
-      <!--heading-->
       <h1 class="text-white bg-pink-800 font-medium md:px-6 px-4 py-1 rounded-lg">Project Details:</h1>
-      <!--text-->
       <p class="text-sm font-light text-white text-center cursor-text">
         As part of my second internship project, I developed a high-performance,
         responsive web application focusing on clean UI and interactive user experiences.
         This project allowed me to bridge the gap between static design and functional logic using modern frontend tools.
       </p>
-      <!--buttons-->
       <div class="flex flex-wrap flex-row gap-4 items-center justify-center">
         <p class="text-sm font-medium text-yellow-500 bg-black/90 px-4 py-1 rounded-lg hover:text-white hover:bg-white/30 cursor-pointer">
           <a href="https://github.com/muhammadyasirmaib0929/Transcend-2nd-Internship-Project-M-Yasir-MAIB" target="_blank">Visit Project Repo</a>
@@ -423,12 +360,9 @@
     </div>
   </div>
 
-</div>  
-
-<!--main div ends here-->
 </div>
 </section>
-<!--projects section ends here-->
+<!--project section ends here-->
 
 
 
@@ -604,4 +538,3 @@
 
 </body>
 </html>
-
